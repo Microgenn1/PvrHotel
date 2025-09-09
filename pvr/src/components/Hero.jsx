@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative h-screen w-full m-0 p-0 overflow-hidden">
       {/* Background Banner Image */}
       <Image
-        src="/assets/banner.png"
+        src="/assets/Banner.png"
         alt="Hotel Banner"
         fill
         className="object-cover brightness-75"
