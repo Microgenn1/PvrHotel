@@ -13,7 +13,7 @@ export default function Header() {
       <div className="relative w-32 h-10">
         <Link href="/">
           <Image
-            src="/assets/logo.png"
+            src="/assets/Logo.png"
             alt="PVR International Logo"
             fill
             className="object-contain"
