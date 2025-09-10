@@ -6,7 +6,7 @@ const rooms = [
   {
     title: 'Twin-Bed Room (AC)',
     price: '₹ 1,800',
-    image: '/assets/gallery 02.png',
+    image: '/assets/Gallery 02.png',
   },
   {
     title: 'Triple-Bed Room (AC)',
@@ -16,7 +16,7 @@ const rooms = [
   {
     title: 'Double-Bed Room (AC)',
     price: '₹ 1,800',
-    image: '/assets/gallery 03.png',
+    image: '/assets/Gallery 03.png',
   },
 ];
 
@@ -24,7 +24,7 @@ const moreRooms = [
   {
     title: 'Twin-Bed Room (Non-AC)',
     price: '₹ 1,300',
-    image: '/assets/gallery 02.png',
+    image: '/assets/Gallery 02.png',
   },
   {
     title: 'Triple-Bed Room (Non-AC)',
@@ -34,7 +34,7 @@ const moreRooms = [
   {
     title: 'Double-Bed Room (Non-AC)',
     price: '₹ 1,300',
-    image: '/assets/about1.png',
+    image: '/assets/About1.png',
   },
 ];
 
