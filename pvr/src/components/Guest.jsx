@@ -49,7 +49,7 @@ export default function GuestReviewsSection() {
       <div className="max-w-6xl mx-auto">
         <h2 className="flex items-center justify-center text-3xl md:text-4xl font-bold mb-12 tracking-wide">
           <Image
-            src="/assets/hdl.png"
+            src="/assets/HdL.png"
             alt="decorative left"
             width={48}
             height={48}
@@ -59,7 +59,7 @@ export default function GuestReviewsSection() {
             Guest Reviews
           </span>
           <Image
-            src="/assets/hdr.png"
+            src="/assets/HdR.png"
             alt="decorative right"
             width={48}
             height={48}
