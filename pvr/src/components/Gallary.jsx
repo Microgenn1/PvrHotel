@@ -4,14 +4,14 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = {
   Rooms: [
-    "/rooms/room1.jpg",
-    "/rooms/room2.jpg",
-    "/rooms/room3.jpg",
-    "/rooms/room4.jpg",
-    "/rooms/room5.jpg",
-    "/rooms/room6.jpg",
-    "/rooms/room7.jpg",
-    "/rooms/room8.jpg",
+    "/Rooms/room1.jpg",
+    "/Rooms/room2.jpg",
+    "/Rooms/room3.jpg",
+    "/Rooms/room4.jpg",
+    "/Rooms/room5.jpg",
+    "/Rooms/room6.jpg",
+    "/Rooms/room7.jpg",
+    "/Rooms/room8.jpg",
     // "/rooms/room9.jpg",
     // "/rooms/room10.jpg",
     // "/rooms/room11.jpg",
