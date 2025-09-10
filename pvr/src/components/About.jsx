@@ -12,7 +12,7 @@ export default function AboutUsSection() {
       {/* Section Title */}
       <h2 className="flex items-center justify-center mb-12">
         <Image
-          src="/assets/hdl.png"
+          src="/assets/Hdl.png"
           alt="decorative left"
           width={48}
           height={48}
@@ -22,7 +22,7 @@ export default function AboutUsSection() {
           About Us
         </span>
         <Image
-          src="/assets/hdr.png"
+          src="/assets/Hdr.png"
           alt="decorative right"
           width={48}
           height={48}
@@ -37,7 +37,7 @@ export default function AboutUsSection() {
           <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px]">
             {/* Main Image */}
             <Image
-              src="/assets/about1.png"
+              src="/assets/About1.png"
               alt="About Main"
               fill
               className="object-cover rounded-md shadow-md"
@@ -46,7 +46,7 @@ export default function AboutUsSection() {
             {/* Small Overlapping Image */}
             <div className="absolute bottom-[-40px] right-[-40px] w-[150px] h-[150px] md:w-[180px] md:h-[180px] border-4 border-black rounded-md overflow-hidden shadow-lg bg-gray-300">
               <Image
-                src="/assets/about2.png"
+                src="/assets/About2.png"
                 alt="About Small"
                 fill
                 className="object-cover"
