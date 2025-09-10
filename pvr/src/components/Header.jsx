@@ -52,7 +52,7 @@ export default function Header() {
           <Link href="#about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="#rooms" onClick={() => setMenuOpen(false)}>Rooms</Link>
           <Link href="#facilities" onClick={() => setMenuOpen(false)}>Facilities</Link>
-          <Link href="#Contactform" onClick={() => setMenuOpen(false)}>Contact</Link>
+          <Link href="#contact" onClick={() => setMenuOpen(false)}>Contact</Link>
 
           {/* Mobile Button */}
           <button className="bg-red-500 px-4 py-2 rounded hover:bg-red-600 text-white uppercase">
