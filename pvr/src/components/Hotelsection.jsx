@@ -103,7 +103,7 @@ export default function HotelSection() {
         {/* View All Button */}
         <button
           onClick={() => setShowModal(true)}
-          className="mt-10 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-sm text-white transition"
+          className="mt-10 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-sm text-white transition"
         >
           View All →
         </button>
