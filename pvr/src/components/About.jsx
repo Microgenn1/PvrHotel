@@ -18,7 +18,7 @@ export default function AboutUsSection() {
           height={48}
           className="mx-3"
         />
-        <span className="text-white font-serif text-cormorant-2xl font-bold tracking-wide">
+        <span className="text-white font-serif text-cormorant text-3xl md:text-4xl font-bold tracking-wide">
           About Us
         </span>
         <Image
