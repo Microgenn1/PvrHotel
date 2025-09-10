@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = {
   Rooms: [
-    "/Rooms/room1.jpg",
+    "/Rooms/room1.JPG",
     "/Rooms/room2.jpg",
     "/Rooms/room3.jpg",
     "/Rooms/room4.jpg",
