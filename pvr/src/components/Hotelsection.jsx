@@ -34,7 +34,7 @@ const moreRooms = [
   {
     title: 'Twin-Bed Room (Non-AC)',
     price: '₹ 1,300',
-    image: '/assets/About1.png',
+    image: '/assets/Gallery 03.png',
   },
 ];
 
