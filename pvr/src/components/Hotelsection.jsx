@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const rooms = [
   {
-    title: 'Twin-Bed Room (AC)',
+    title: 'Double-Bed Room (AC)',
     price: '₹ 1,800',
     image: '/assets/Gallery 02.png',
   },
@@ -14,7 +14,7 @@ const rooms = [
     image: '/assets/Triple-Bed.png',
   },
   {
-    title: 'Double-Bed Room (AC)',
+    title: 'Twin-Bed Room (AC)',
     price: '₹ 1,800',
     image: '/assets/Gallery 03.png',
   },
@@ -22,7 +22,7 @@ const rooms = [
 
 const moreRooms = [
   {
-    title: 'Twin-Bed Room (Non-AC)',
+    title: ' Double-Bed Room (Non-AC)',
     price: '₹ 1,300',
     image: '/assets/Gallery 02.png',
   },
@@ -32,7 +32,7 @@ const moreRooms = [
     image: '/assets/Triple-Bed.png',
   },
   {
-    title: 'Double-Bed Room (Non-AC)',
+    title: 'Twin-Bed Room (Non-AC)',
     price: '₹ 1,300',
     image: '/assets/About1.png',
   },
