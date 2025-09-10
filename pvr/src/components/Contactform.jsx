@@ -45,74 +45,74 @@ export default function ContactUsSection() {
         backgroundPosition: "center",
       }}
     >
-      <div className="text-center">
+      <div className="text-center w-full">
         <h2 className="font-serif text-cormorant text-2xl font-bold text-gray-800 uppercase mb-6">
           Contact Us
         </h2>
 
-        <div className="bg-white/90 shadow-lg rounded-2xl max-w-md w-full p-8 ">
-        <h3 className=" text-lg font-semibold text-gray-700 mb-6">
-          Get in Touch
-        </h3>
+         <div className="bg-white/90 shadow-lg rounded-2xl w-full max-w-2xl lg:max-w-3xl p-8 mx-auto">
+          <h3 className="text-lg font-semibold text-gray-700 mb-6">
+            Get in Touch
+          </h3>
 
-        <form onSubmit={handleSubmit} className="space-y-4 text-left ">
-          <div>
-            <label className="block text-sm font-medium mb-1">Name</label>
-            <input
-              type="text"
-              name="name"
-              required
-              className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
-            />
-          </div>
+          <form onSubmit={handleSubmit} className="space-y-4 text-left">
+            <div>
+              <label className="block text-sm font-medium mb-1">Name</label>
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1">Mobile no</label>
-            <input
-              type="text"
-              name="mobile"
-              required
-              className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">Mobile no</label>
+              <input
+                type="text"
+                name="mobile"
+                required
+                className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1">E-mail</label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">E-mail</label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1">Message</label>
-            <textarea
-              name="message"
-              rows="3"
-              required
-              className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">Message</label>
+              <textarea
+                name="message"
+                rows="3"
+                required
+                className="w-full border rounded-md px-3 py-2 focus:ring focus:ring-indigo-300"
+              />
+            </div>
 
-          {/* Buttons */}
-          <div className="flex justify-between pt-4">
-            <button
-              type="reset"
-              className="px-6 py-2 border border-indigo-600 text-indigo-600 font-semibold rounded hover:bg-indigo-50"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              disabled={loading}
-              className="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 disabled:opacity-50"
-            >
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </div>
-        </form>
+            {/* Buttons */}
+            <div className="flex justify-between pt-4">
+              <button
+                type="reset"
+                className="px-6 py-2 border border-indigo-600 text-indigo-600 font-semibold rounded hover:bg-indigo-50"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 disabled:opacity-50"
+              >
+                {loading ? "Sending..." : "Send"}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
