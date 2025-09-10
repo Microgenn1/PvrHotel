@@ -13,7 +13,11 @@ const amenities = [
   { icon: "/assets/Service.svg", label: "24/7 Service" },
   { icon: "/assets/Foods.svg", label: "Food & Beverages" },
   { icon: "/assets/Cctv.svg", label: "CCTV" },
-  { icon: "/assets/water.svg", label: "Three Types Of Tea  24/7" },
+  { icon: "/assets/water.svg", label: "3 Types Of Tea  24/7" },
+  { icon: "/assets/Hair Dryer.svg", label: "Hair Dryer" },
+  { icon: "/assets/Water-Heater.svg", label: "Water-Heater" },
+  { icon: "/assets/Kettle.svg", label: "Kettle" },
+  { icon: "/assets/Ro-water.svg", label: "Ro-water" },
 ];
 
 export default function AmenitiesSection() {
