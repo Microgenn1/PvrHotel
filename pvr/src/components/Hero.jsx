@@ -23,7 +23,7 @@ export default function Hero() {
         {/* Logo */}
         <div className="relative w-[320px] h-[100px] sm:w-[400px] sm:h-[130px] md:w-[500px] md:h-[160px] lg:w-[600px] lg:h-[180px] mx-auto my-6">
           <Image
-            src="/assets/logo.png"
+            src="/assets/Logo.png"
             alt="Hotel Logo"
             fill
             className="object-contain"
