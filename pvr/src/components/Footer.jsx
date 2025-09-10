@@ -16,8 +16,7 @@ export default function Footer() {
         {/* Logo */}
         <div>
           <Image
-            src="/assets/logo.png" // replace with your logo path
-            alt="PVR Logo"
+            src="/assets/Logo.png"  
             width={200}
             height={80}
             className="object-contain"
