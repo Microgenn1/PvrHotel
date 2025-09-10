@@ -8,7 +8,7 @@ import "swiper/css";
 const amenities = [
   { icon: "/assets/Ac.svg", label: "AC" },
   { icon: "/assets/Parking.svg", label: "Parking" },
-  { icon: "/assets/Wi-fi.svg", label: "Wi-Fi" },
+  { icon: "/assets/Wi-Fi.svg", label: "Wi-Fi" },
   { icon: "/assets/Toiletries.svg", label: "Basic Toiletries" },
   { icon: "/assets/Service.svg", label: "24/7 Service" },
   { icon: "/assets/Foods.svg", label: "Food & Beverages" },
