@@ -63,7 +63,7 @@ export default function HotelSection() {
             height={48}
             className="mx-2"
           />
-          <span className="text-white font-cormorant">Welcome To Our Hotel</span>
+          <span className="text-white font-cormorant">Welcome To pvr international</span>
           <Image
             src="/assets/HdR.png"
             alt="decorative right"
