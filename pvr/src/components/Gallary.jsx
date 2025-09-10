@@ -116,7 +116,7 @@ export default function GallerySection() {
         <div className="text-center mt-10">
           <button
             onClick={() => setIsOpen(true)}
-            className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold tracking-wide hover:bg-red-700 transition shadow-md hover:shadow-lg"
+            className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold tracking-wide hover:bg-indigo-700 transition shadow-md hover:shadow-lg"
           >
             VIEW ALL
           </button>
