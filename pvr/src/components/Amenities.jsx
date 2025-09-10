@@ -13,7 +13,7 @@ const amenities = [
   { icon: "/assets/Service.svg", label: "24/7 Service" },
   { icon: "/assets/Foods.svg", label: "Food & Beverages" },
   { icon: "/assets/Cctv.svg", label: "CCTV" },
-  { icon: "/assets/water.svg", label: "Water" },
+  { icon: "/assets/water.svg", label: "Three Types Of Tea  24/7" },
 ];
 
 export default function AmenitiesSection() {
