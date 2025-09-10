@@ -148,7 +148,7 @@ export default function HotelSection() {
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
-              className="mt-8 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-full text-white transition block mx-auto"
+              className="mt-8 px-6 py-2 bg-indigo-600 hover:bg-indigo-700   text-white transition block mx-auto"
             >
               Close ✕
             </button>
