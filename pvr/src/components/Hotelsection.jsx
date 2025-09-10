@@ -103,7 +103,7 @@ export default function HotelSection() {
         {/* View All Button */}
         <button
           onClick={() => setShowModal(true)}
-          className="mt-10 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full text-white transition"
+          className="mt-10 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-sm text-white transition"
         >
           View All →
         </button>
@@ -148,7 +148,7 @@ export default function HotelSection() {
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
-              className="mt-8 px-6 py-2 bg-red-600 hover:bg-red-700 rounded-full text-white transition block mx-auto"
+              className="mt-8 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-full text-white transition block mx-auto"
             >
               Close ✕
             </button>
