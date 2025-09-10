@@ -6,13 +6,13 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const amenities = [
-  { icon: "/assets/ac.svg", label: "AC" },
-  { icon: "/assets/parking.svg", label: "Parking" },
-  { icon: "/assets/wi-fi.svg", label: "Wi-Fi" },
-  { icon: "/assets/toiletries.svg", label: "Basic Toiletries" },
-  { icon: "/assets/service.svg", label: "24/7 Service" },
-  { icon: "/assets/foods.svg", label: "Food & Beverages" },
-  { icon: "/assets/cctv.svg", label: "CCTV" },
+  { icon: "/assets/Ac.svg", label: "AC" },
+  { icon: "/assets/Parking.svg", label: "Parking" },
+  { icon: "/assets/Wi-fi.svg", label: "Wi-Fi" },
+  { icon: "/assets/Toiletries.svg", label: "Basic Toiletries" },
+  { icon: "/assets/Service.svg", label: "24/7 Service" },
+  { icon: "/assets/Foods.svg", label: "Food & Beverages" },
+  { icon: "/assets/Cctv.svg", label: "CCTV" },
   { icon: "/assets/water.svg", label: "Water" },
 ];
 
