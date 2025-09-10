@@ -57,7 +57,7 @@ export default function HotelSection() {
         {/* Heading with decorative images */}
         <h2 className="flex items-center justify-center text-4xl font-bold mb-8 tracking-wide font-serif uppercase">
           <Image
-            src="/assets/Hdl.png"
+            src="/assets/HdL.png"
             alt="decorative left"
             width={48}
             height={48}
@@ -65,7 +65,7 @@ export default function HotelSection() {
           />
           <span className="text-white font-cormorant">Welcome To Our Hotel</span>
           <Image
-            src="/assets/Hdr.png"
+            src="/assets/HdR.png"
             alt="decorative right"
             width={48}
             height={48}
