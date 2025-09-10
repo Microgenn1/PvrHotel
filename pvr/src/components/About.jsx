@@ -12,7 +12,7 @@ export default function AboutUsSection() {
       {/* Section Title */}
       <h2 className="flex items-center justify-center mb-12">
         <Image
-          src="/assets/Hdl.png"
+          src="/assets/HdL.png"
           alt="decorative left"
           width={48}
           height={48}
@@ -22,7 +22,7 @@ export default function AboutUsSection() {
           About Us
         </span>
         <Image
-          src="/assets/Hdr.png"
+          src="/assets/HdR.png"
           alt="decorative right"
           width={48}
           height={48}
