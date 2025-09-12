@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
- 
 
 export default function BookNow() {
   const [formData, setFormData] = useState({
@@ -33,7 +32,7 @@ export default function BookNow() {
       !formData.email ||
       !formData.phone
     ) {
-      Swal.fire('Error', 'Please fill all required fields!', 'error')
+      alert('Please fill all required fields!')
       return
     }
 
@@ -49,7 +48,7 @@ export default function BookNow() {
       const result = await response.json()
 
       if (result.success) {
-        Swal.fire('Success!', 'Your reservation has been sent.', 'success')
+        alert('Your reservation has been sent successfully!')
         setFormData({
           roomType: '',
           checkIn: '',
@@ -62,10 +61,11 @@ export default function BookNow() {
           phone: '',
         })
       } else {
-        Swal.fire('Error', result.message || 'Submission failed.', 'error')
+        alert(result.message || 'Submission failed.')
       }
     } catch (error) {
-      Swal.fire('Error', 'Something went wrong!', 'error')
+      alert('Something went wrong!')
+      console.error(error)
     }
   }
 
@@ -185,4 +185,3 @@ export default function BookNow() {
     </div>
   )
 }
-
