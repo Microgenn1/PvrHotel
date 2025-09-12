@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Swal from 'sweetalert2'
+ 
 
 export default function BookNow() {
   const [formData, setFormData] = useState({
@@ -185,3 +185,4 @@ export default function BookNow() {
     </div>
   )
 }
+
