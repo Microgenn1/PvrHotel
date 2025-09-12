@@ -90,10 +90,13 @@ export default function BookNow() {
             className="col-span-2 p-3 rounded-full bg-white/90"
             required
           >
-            <option value="">Room Type</option>
-            <option value="Deluxe">Deluxe</option>
-            <option value="Suite">Suite</option>
-            <option value="Standard">Standard</option>
+            <option value="">Select Room Type</option>
+            <option value="">Twin-Bed Room (AC)</option>
+            <option value="Deluxe">Triple-Bed Room (AC)</option>
+            <option value="Suite">Double-Bed Room (AC)</option>
+            <option value="Standard">Twin-Bed Room (Non-AC)</option>
+             <option value="">Triple-Bed Room (Non-AC)</option>
+            <option value="Deluxe">Double-Bed Room (Non-AC)</option>
           </select>
 
           {/* Check-In & Check-Out */}
@@ -185,3 +188,4 @@ export default function BookNow() {
     </div>
   )
 }
+
