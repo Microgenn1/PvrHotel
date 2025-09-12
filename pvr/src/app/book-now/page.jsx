@@ -83,21 +83,25 @@ export default function BookNow() {
           <input type="hidden" name="access_key" value="657d7b4e-dc5c-454d-8497-255a725632aa" />
 
           {/* Room Type */}
-          <select
-            name="roomType"
-            value={formData.roomType}
-            onChange={handleChange}
-            className="col-span-2 p-3 rounded-full bg-white/90"
-            required
-          >
-            <option value="">Select Room Type</option>
-            <option value="">Twin-Bed Room (AC)</option>
-            <option value="Deluxe">Triple-Bed Room (AC)</option>
-            <option value="Suite">Double-Bed Room (AC)</option>
-            <option value="Standard">Twin-Bed Room (Non-AC)</option>
-             <option value="">Triple-Bed Room (Non-AC)</option>
-            <option value="Deluxe">Double-Bed Room (Non-AC)</option>
-          </select>
+         <select
+  name="roomType"
+  value={formData.roomType}
+  onChange={handleChange}
+  className="col-span-2 p-3 rounded-full bg-white/90"
+  required
+>
+  {/* Default option */}
+  <option value="">Select Room Type</option>
+
+  {/* Room type options */}
+  <option value="TwinBedAC">Twin-Bed Room (AC)</option>
+  <option value="TripleBedAC">Triple-Bed Room (AC)</option>
+  <option value="DoubleBedAC">Double-Bed Room (AC)</option>
+  <option value="TwinBedNonAC">Twin-Bed Room (Non-AC)</option>
+  <option value="TripleBedNonAC">Triple-Bed Room (Non-AC)</option>
+  <option value="DoubleBedNonAC">Double-Bed Room (Non-AC)</option>
+</select>
+
 
           {/* Check-In & Check-Out */}
           <input
@@ -188,4 +192,5 @@ export default function BookNow() {
     </div>
   )
 }
+
 
