@@ -23,7 +23,6 @@ export default function BookNow() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // Basic validation
     if (
       !formData.roomType ||
       !formData.checkIn ||
@@ -32,12 +31,21 @@ export default function BookNow() {
       !formData.email ||
       !formData.phone
     ) {
-      alert('Please fill all required fields!')
+      alert('⚠️ Please fill all required fields!')
       return
     }
 
     const form = e.target
     const formDataObj = new FormData(form)
+
+    // Map replyto -> email field
+    formDataObj.append('replyto', formData.email)
+
+    // Add custom auto response message
+    formDataObj.append(
+      'web3forms[autoresponse]',
+      `Hi ${formData.name},\n\nThank you for booking at Hotel!\n\nDetails:\nRoom Type: ${formData.roomType}\nCheck-In: ${formData.checkIn}\nCheck-Out: ${formData.checkOut}\nRooms: ${formData.rooms}\nAdults: ${formData.adults}\nChildren: ${formData.children}\n\nWe will contact you shortly.\n\n- Hotel Team`
+    )
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -48,7 +56,7 @@ export default function BookNow() {
       const result = await response.json()
 
       if (result.success) {
-        alert('Your reservation has been sent successfully!')
+        alert('✅ Your reservation has been sent successfully!')
         setFormData({
           roomType: '',
           checkIn: '',
@@ -61,7 +69,7 @@ export default function BookNow() {
           phone: '',
         })
       } else {
-        alert(result.message || 'Submission failed.')
+        alert(result.message || 'Submission failed ❌')
       }
     } catch (error) {
       alert('Something went wrong!')
@@ -78,30 +86,34 @@ export default function BookNow() {
         <h1 className="text-3xl font-bold text-center text-white mb-6">
           Make Your Reservation
         </h1>
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <form
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        >
           {/* Web3Forms Access Key */}
-          <input type="hidden" name="access_key" value="657d7b4e-dc5c-454d-8497-255a725632aa" />
+          <input
+            type="hidden"
+            name="access_key"
+            value="cdeea7e2-430c-48cc-9578-577b95d64602"
+          />
 
           {/* Room Type */}
-         <select
-  name="roomType"
-  value={formData.roomType}
-  onChange={handleChange}
-  className="col-span-2 p-3 rounded-full bg-white/90"
-  required
->
-  {/* Default option */}
-  <option value="">Select Room Type</option>
-
-  {/* Room type options */}
-  <option value="TwinBedAC">Twin-Bed Room (AC)</option>
-  <option value="TripleBedAC">Triple-Bed Room (AC)</option>
-  <option value="DoubleBedAC">Double-Bed Room (AC)</option>
-  <option value="TwinBedNonAC">Twin-Bed Room (Non-AC)</option>
-  <option value="TripleBedNonAC">Triple-Bed Room (Non-AC)</option>
-  <option value="DoubleBedNonAC">Double-Bed Room (Non-AC)</option>
-</select>
-
+          <select
+            name="roomType"
+            value={formData.roomType}
+            onChange={handleChange}
+            className="col-span-2 p-3 rounded-sm bg-white/90"
+            required
+          >
+            <option value="">Select Room Type</option>
+            <option value="TwinBedAC">Twin-Bed Room (AC)</option>
+            <option value="TripleBedAC">Triple-Bed Room (AC)</option>
+            <option value="DoubleBedAC">Double-Bed Room (AC)</option>
+            <option value="TwinBedNonAC">Twin-Bed Room (Non-AC)</option>
+            <option value="TripleBedNonAC">Triple-Bed Room (Non-AC)</option>
+            <option value="DoubleBedNonAC">Double-Bed Room (Non-AC)</option>
+          </select>
 
           {/* Check-In & Check-Out */}
           <input
@@ -109,7 +121,7 @@ export default function BookNow() {
             name="checkIn"
             value={formData.checkIn}
             onChange={handleChange}
-            className="p-3 rounded-full bg-white/90"
+            className="p-3 rounded-sm bg-white/90"
             required
           />
           <input
@@ -117,7 +129,7 @@ export default function BookNow() {
             name="checkOut"
             value={formData.checkOut}
             onChange={handleChange}
-            className="p-3 rounded-full bg-white/90"
+            className="p-3 rounded-sm bg-white/90"
             required
           />
 
@@ -129,7 +141,7 @@ export default function BookNow() {
               placeholder="No of rooms"
               value={formData.rooms}
               onChange={handleChange}
-              className="flex-1 p-3 rounded-full bg-white/90"
+              className="flex-1 p-3 rounded-sm bg-white/90"
             />
             <input
               type="number"
@@ -137,7 +149,7 @@ export default function BookNow() {
               placeholder="No of adults"
               value={formData.adults}
               onChange={handleChange}
-              className="flex-1 p-3 rounded-full bg-white/90"
+              className="flex-1 p-3 rounded-sm bg-white/90"
             />
             <input
               type="number"
@@ -145,7 +157,7 @@ export default function BookNow() {
               placeholder="No of children"
               value={formData.children}
               onChange={handleChange}
-              className="flex-1 p-3 rounded-full bg-white/90"
+              className="flex-1 p-3 rounded-sm bg-white/90"
             />
           </div>
 
@@ -156,7 +168,7 @@ export default function BookNow() {
             placeholder="Enter your Name"
             value={formData.name}
             onChange={handleChange}
-            className="col-span-2 p-3 rounded-full bg-white/90"
+            className="col-span-2 p-3 rounded-sm bg-white/90"
             required
           />
 
@@ -167,7 +179,7 @@ export default function BookNow() {
             placeholder="Enter your Email"
             value={formData.email}
             onChange={handleChange}
-            className="p-3 rounded-full bg-white/90"
+            className="p-3 rounded-sm bg-white/90"
             required
           />
           <input
@@ -176,14 +188,14 @@ export default function BookNow() {
             placeholder="Enter your Phone"
             value={formData.phone}
             onChange={handleChange}
-            className="p-3 rounded-full bg-white/90"
+            className="p-3 rounded-sm bg-white/90"
             required
           />
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="col-span-2 bg-orange-600 text-white font-bold py-3 rounded-full hover:bg-orange-700 transition"
+            className="col-span-2 bg-indigo-600 text-white font-bold py-3 rounded-sm hover:bg-red-500 transition"
           >
             BOOK NOW
           </button>
@@ -192,5 +204,3 @@ export default function BookNow() {
     </div>
   )
 }
-
-
