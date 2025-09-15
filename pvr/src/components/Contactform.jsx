@@ -16,7 +16,7 @@ export default function ContactUsSection() {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "e5268c2a-b2d5-4079-b8c9-6f891a32036e",
+        access_key: "cdeea7e2-430c-48cc-9578-577b95d64602",
         name: e.target.name.value,
         mobile: e.target.mobile.value,
         email: e.target.email.value,
