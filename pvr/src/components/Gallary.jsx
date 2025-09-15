@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = {
@@ -12,20 +12,9 @@ const categories = {
     "/Rooms/room6.JPG",
     "/Rooms/room7.JPG",
     "/Rooms/room8.JPG",
-    // "/rooms/room9.JPG",
-    // "/rooms/room10.JPG",
-    // "/rooms/room11.JPG",
-    // "/rooms/room12.JPG",
-    // "/rooms/room13.JPG",
-    // "/rooms/room14.JPG",
-    // "/rooms/room15.JPG",
-    // "/rooms/room16.JPG",
-    // "/rooms/room17.JPG",
-    // "/rooms/room18.JPG",
-    // "/rooms/room19.JPG",
-    // "/rooms/room20.JPG",
-    // "/rooms/room21.JPG",
-    // "/rooms/room22.JPG",
+    "/Rooms/room9.JPG",
+    "/Rooms/room10.JPG",
+    "/Rooms/room11.JPG",
   ],
   Commonarea: [
     "/Commonarea/room1.JPG",
@@ -38,13 +27,13 @@ const categories = {
     "/Commonarea/room8.JPG",
   ],
   Restrooms: [
-    "/RestRooms/room1.JPG",
-    "/RestRooms/room2.JPG",
-    "/RestRooms/room3.JPG",
-    "/RestRooms/room4.JPG",
-    "/RestRooms/room5.JPG",
-    "/RestRooms/room6.JPG",
-    "/RestRooms/room7.JPG",
+    "/Restrooms/room1.JPG",
+    "/Restrooms/room2.JPG",
+    "/Restrooms/room3.JPG",
+    "/Restrooms/room4.JPG",
+    "/Restrooms/room5.JPG",
+    "/Restrooms/room6.JPG",
+    "/Restrooms/room7.JPG",
   ],
   Lift: [
     "/Lift/room1.JPG",
@@ -71,6 +60,14 @@ export default function GallerySection() {
   const handleNext = () => {
     setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
+
+  // Preload first image of active category when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      const preloadImg = new Image();
+      preloadImg.src = categories[activeCategory][0];
+    }
+  }, [isOpen, activeCategory]);
 
   return (
     <section className="py-16 bg-white font-sans">
@@ -105,6 +102,7 @@ export default function GallerySection() {
               <img
                 src={src}
                 alt={`Gallery ${idx + 1}`}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"></div>
@@ -116,7 +114,7 @@ export default function GallerySection() {
         <div className="text-center mt-10">
           <button
             onClick={() => setIsOpen(true)}
-            className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold tracking-wide hover:bg-indigo-700 transition shadow-md hover:shadow-lg"
+            className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold tracking-wide hover:bg-indigo-800 transition shadow-md hover:shadow-lg"
           >
             VIEW ALL
           </button>
@@ -125,7 +123,7 @@ export default function GallerySection() {
         {/* Modal */}
         {isOpen && (
           <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-            <div className="bg-[#1a1a1a] w-11/12 lg:w-5/6 h-5/6 rounded-xl shadow-2xl flex flex-col relative text-white">
+            <div className="bg-[#1a1a1a] w-full h-full lg:w-5/6 lg:h-5/6 rounded-none lg:rounded-xl shadow-2xl flex flex-col relative text-white">
               {/* Close Button */}
               <button
                 className="absolute top-3 right-3 text-gray-400 hover:text-white"
@@ -135,7 +133,7 @@ export default function GallerySection() {
               </button>
 
               {/* Category Tabs */}
-              <div className="flex justify-center space-x-4 p-4 border-b border-gray-700">
+              <div className="flex justify-center space-x-2 sm:space-x-4 p-3 border-b border-gray-700 flex-wrap">
                 {Object.keys(categories).map((cat) => (
                   <button
                     key={cat}
@@ -143,7 +141,7 @@ export default function GallerySection() {
                       setActiveCategory(cat);
                       setActiveIndex(0);
                     }}
-                    className={`px-5 py-2 rounded-md text-sm tracking-wider uppercase font-serif ${
+                    className={`px-4 py-2 rounded-md text-xs sm:text-sm tracking-wider uppercase font-serif ${
                       activeCategory === cat
                         ? "bg-blue-600 text-white font-bold"
                         : "bg-gray-800 text-gray-300 hover:bg-gray-700"
@@ -155,9 +153,9 @@ export default function GallerySection() {
               </div>
 
               {/* Main Content */}
-              <div className="flex flex-1 overflow-hidden">
-                {/* Left Thumbnails Grid */}
-                <div className="w-1/4 bg-black/30 p-3 grid grid-cols-2 gap-3 place-content-start overflow-y-auto max-h-full custom-scrollbar">
+              <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+                {/* Thumbnails */}
+                <div className="lg:w-1/4 lg:h-full bg-black/30 p-3 grid grid-cols-3 lg:grid-cols-2 gap-3 overflow-y-auto scrollbar-none">
                   {images.map((img, idx) => (
                     <div
                       key={idx}
@@ -171,7 +169,8 @@ export default function GallerySection() {
                       <img
                         src={img}
                         alt={`thumb-${idx}`}
-                        className="w-full h-24 object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                        className="w-full h-20 sm:h-24 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
                     </div>
@@ -179,27 +178,30 @@ export default function GallerySection() {
                 </div>
 
                 {/* Main Preview */}
-                <div className="relative flex-1 flex flex-col items-center justify-center bg-black">
+                <div className="relative flex-1 flex items-center justify-center bg-black">
                   {/* Prev Button */}
                   <button
                     onClick={handlePrev}
-                    className="absolute left-4 bg-black/60 p-2 rounded-full text-white hover:bg-black/80"
+                    className="absolute left-3 sm:left-4 bg-black/60 p-2 rounded-full text-white hover:bg-black/80"
                   >
-                    <ChevronLeft size={28} />
+                    <ChevronLeft size={20} />
                   </button>
 
                   <img
                     src={currentImage}
                     alt="Preview"
+                    loading="lazy"
                     className="max-h-full max-w-full rounded-lg shadow-lg"
+                    style={{ filter: "blur(10px)", transition: "filter 0.4s ease-out" }}
+                    onLoad={(e) => (e.currentTarget.style.filter = "none")}
                   />
 
                   {/* Next Button */}
                   <button
                     onClick={handleNext}
-                    className="absolute right-4 bg-black/60 p-2 rounded-full text-white hover:bg-black/80"
+                    className="absolute right-3 sm:right-4 bg-black/60 p-2 rounded-full text-white hover:bg-black/80"
                   >
-                    <ChevronRight size={28} />
+                    <ChevronRight size={20} />
                   </button>
                 </div>
               </div>
@@ -207,20 +209,6 @@ export default function GallerySection() {
           </div>
         )}
       </div>
-
-      {/* Custom Scrollbar Styles */}
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #4b5563; /* gray-600 */
-          border-radius: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-      `}</style>
     </section>
   );
 }
